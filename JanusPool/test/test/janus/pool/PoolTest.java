@@ -19,7 +19,7 @@ public class PoolTest {
 	public void testCreation() {
 		try {
 			TestShiveFabric shiva = new TestShiveFabric();
-			ShivaPool<TestString> pool = new ShivaPool<>(10, 10, shiva);
+			new ShivaPool<>(10, 10, shiva);
 		} catch (Exception ex) {
 		    LOG.error(UNERWARTETE_AUSNAHME,ex);
 			fail(AUSNAHME_AUFGETRETEN);

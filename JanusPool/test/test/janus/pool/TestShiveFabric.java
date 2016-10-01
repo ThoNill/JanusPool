@@ -13,7 +13,7 @@ public class TestShiveFabric implements ShivaFabric<TestString> {
 	@Override
 	public TestString create() {
 		createdCount++;
-		return new TestString("" + createdCount);
+		return new TestString(Integer.toString(createdCount));
 	}
 
 	@Override

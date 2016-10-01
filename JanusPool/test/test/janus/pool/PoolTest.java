@@ -5,10 +5,14 @@ import static org.junit.Assert.*;
 
 import java.sql.Connection;
 
+import org.apache.log4j.Logger;
 import org.janus.pool.ShivaPool;
 import org.junit.Test;
 
+
 public class PoolTest {
+    public static final Logger LOG = Logger.getLogger(PoolTest.class);
+
 
 	@Test
 	public void testCreation() {
@@ -16,6 +20,7 @@ public class PoolTest {
 			TestShiveFabric shiva = new TestShiveFabric();
 			ShivaPool<TestString> pool = new ShivaPool<TestString>(10, 10, shiva);
 		} catch (Exception ex) {
+		    LOG.error("unerwartete Ausnahme",ex);
 			fail("Ausnahme aufgetreten");
 		}
 	}
@@ -40,6 +45,7 @@ public class PoolTest {
 			assertEquals(0, shiva.destroyedCount);
 
 		} catch (Exception ex) {
+		    LOG.error("unerwartete Ausnahme",ex);
 			fail("Ausnahme aufgetreten");
 		}
 	}
@@ -103,6 +109,7 @@ public class PoolTest {
 			
 			
 		} catch (Exception ex) {
+		    LOG.error("unerwartete Ausnahme",ex);
 			fail("Ausnahme aufgetreten");
 		}
 	}
@@ -127,6 +134,7 @@ public class PoolTest {
 			}
 
 		} catch (Exception ex) {
+		    LOG.error("unerwartete Ausnahme",ex);
 			fail("Ausnahme aufgetreten");
 		}
 	}

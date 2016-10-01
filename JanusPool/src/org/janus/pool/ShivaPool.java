@@ -30,13 +30,13 @@ public class ShivaPool<K extends DoubleLinkedListElement> implements ShivaFabric
 		this.normalCount = normalCount;
 		this.maxCount = maxCount;
 		this.shiva = shiva;
-		inactive = new DoubleLinkedList<K>();
-		active = new DoubleLinkedList<K>();
+		inactive = new DoubleLinkedList<>();
+		active = new DoubleLinkedList<>();
 	}
 
 	@Override
 	public K create() {
-		K obj = null;
+		K obj;
 
 		synchronized (this) {
 			if (maxCount > 0 && active.size() + inactive.size()>= maxCount ) {

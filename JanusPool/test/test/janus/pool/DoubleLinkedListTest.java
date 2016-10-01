@@ -12,7 +12,7 @@ public class DoubleLinkedListTest {
 	@Test
 	public void test() {
 		
-		DoubleLinkedList<DoubleLinkedListElement> liste = new DoubleLinkedList<DoubleLinkedListElement>();
+		DoubleLinkedList<DoubleLinkedListElement> liste = new DoubleLinkedList<>();
 		
 		countElementTest(liste, 0);
 		
@@ -42,7 +42,6 @@ public class DoubleLinkedListTest {
 		
 		countElementTest(liste, 4);
 			
-//		fail("Not yet implemented");
 	}
 
 	private DoubleLinkedListElement addNewElement(DoubleLinkedList<DoubleLinkedListElement> liste) {

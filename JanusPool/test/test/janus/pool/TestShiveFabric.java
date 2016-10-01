@@ -4,13 +4,11 @@ import org.janus.pool.ShivaFabric;
 
 
 public class TestShiveFabric implements ShivaFabric<TestString> {
-	public int createdCount;
-	public int destroyedCount;
-	
-	public TestShiveFabric() {
-		
-	
-	}
+    private int createdCount;
+    private int destroyedCount;
+
+    public TestShiveFabric() {
+    }
 
 	@Override
 	public TestString create() {
@@ -27,4 +25,12 @@ public class TestShiveFabric implements ShivaFabric<TestString> {
 	public boolean isAlive(TestString obj) {
 		return true;
 	}
+
+    public int getCreatedCount() {
+        return createdCount;
+    }
+
+    public int getDestroyedCount() {
+        return destroyedCount;
+    }
 }

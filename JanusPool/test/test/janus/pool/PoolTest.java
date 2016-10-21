@@ -1,8 +1,7 @@
 package test.janus.pool;
 
-import static org.junit.Assert.*;
-
-import java.sql.Connection;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.apache.log4j.Logger;
 import org.janus.pool.ShivaPool;

@@ -1,6 +1,6 @@
 package test.janus.pool;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.janus.lists.ActionOnObject;
 import org.janus.lists.DoubleLinkedList;
